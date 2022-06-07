@@ -1,0 +1,690 @@
+* {
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #1d273b;
+    font-weight: 300;
+}
+
+.container {
+    width: 90%;
+    /*Para que el contenedor ocupe el 90% del ancho de la pantalla*/
+    max-width: 1000px;
+    /*Para que el ancho no pase de 1000px*/
+    margin: auto;
+    /*Para que el contenedor se centre*/
+    overflow: hidden;
+    /*Para que cuando la imagen pase los 1000px, lo que sobra lo esconda*/
+}
+
+.container-1 {
+    width: 90%;
+    /*Para que el contenedor ocupe el 90% del ancho de la pantalla*/
+    max-width: 1000px;
+    /*Para que el ancho no pase de 1000px*/
+    margin: auto;
+    /*Para que el contenedor se centre*/
+    overflow: hidden;
+    /*Para que cuando la imagen pase los 1000px, lo que sobra lo esconda*/
+    padding: 60px 0;
+    /*Para que haya un espaciado de 60px arriba y abajo*/
+}
+
+h1 {
+    font-size: 50px;
+    /*PAra cambiar el tamaño de la letra, en este caso la del titulo*/
+}
+
+
+.container-header {
+    width: 100%;
+    /*Para que el contenedor ocupe el 100% de ancho*/
+    height: 600px;
+    /*Para que el contenedor de alto sea de 60px*/
+    display: flex;
+    justify-content: space-between;
+    /*Para que haya un espacio en el contenedor entre los contenidos*/
+    align-items: center;
+    /*Para que los elementos se centren*/
+}
+
+.container-header>img {
+    /*Para que en la clase "container-header" afecte solo la etiqueta img*/
+    width: 70%;
+    /*Para acomodar el ancho de la imagen*/
+    animation: ease-in animat 1s;
+    /*Para que aparezca la animacion en 1 segundo*/
+}
+
+.texts-header {
+    margin: 0 0 0 30px;
+    /*Para agregar un margen de 0 arriba, 0 a la derecha, 0 abajo y 30px a la izquierda*/
+}
+
+.container-header p {
+    font-weight: 100;
+    /*Para que la letra tenga mas opacidad*/
+    margin-top: 14px;
+    /*Para que los parrafos tengan un margen arriba de 14px*/
+    color: #5d6678;
+    /*Para que el color de las letras sea de un color gricesito*/
+}
+
+.container-header a {
+    margin: 28px 0 0 0;
+    /*Para que el boton tenga un margen arriba de 28px y 0 hacia los demas lados*/
+    width: 130px;
+    /*Para que tenga un ancho de 130px*/
+    display: block;
+    /*Para que tenga propiedad de bloque y asi poder modificarlo*/
+    background: #2570ff;
+    /*Para que el fondo sea un verde menta*/
+    text-align: center;
+    /*Para que el texto se centre*/
+    color: #fff;
+    /*Para que las letras tenga un color blanco*/
+    padding: 12px 0;
+    /*Para que tenga un espaciado interno de 12px arriba y abajo y 0 hacia los lados*/
+    text-decoration: none;
+    /*Para quitarle el subrayado de la etiqueta a*/
+    font-weight: 400;
+    /*Para que la letra tenga mas de tonalidad*/
+    text-transform: uppercase;
+    /*Para que el texto se ponga en letra maysucula*/
+    font-size: 14px;
+    /*Para cambiar el tamaño de la letra*/
+    border-radius: 5px;
+    /*Para que los bordes sean un poco mas curvados*/
+    box-shadow: 0 8px 32px rgba(31, 76, 222, 0.37);
+    /*Para que tenga un sombreado de 0 arriba, 8px hacia a la derecha y 32px hacia abajo*/
+}
+
+.titulo {
+    font-size: 50px;
+    /*Para cambiar el tamaño de la letra*/
+}
+
+/*About us*/
+
+.about-us {
+    background: #f2f2f2;
+}
+
+.container-article {
+    display: flex;
+    flex-wrap: wrap;
+    /*Para que se ponga uno debajo del otro*/
+    margin-top: 60px;
+    justify-content: space-around;
+    /*Para que los items se separen con un mismo espacio a su alrededor*/
+}
+
+.article {
+    width: 29%;
+    /*Para que ocupe el 29% de ancho de la pagina*/
+    background: #fff;
+    /*Para que cada articulo tenga un fondo blanco*/
+    margin-bottom: 30px;
+    /*Para que cada articulo tenga un espaciado abajo*/
+    border-radius: 10px;
+    /*Para que los bordes sean un poco mas curveados*/
+    padding: 45px 30px 60px 30px;
+    /*Para que el borde y el texto tengan un espaceado interno de 45px haacia arriba, 30px hacia la derecha, 60px hacia abajo y 30px hacia a laizquierda*/
+    transition: 0.5s;
+    /*Para que la transicion de las intrucciones anteriores dure medio segundo*/
+}
+
+.article:hover {
+    box-shadow: 0 4px 10px rgba(17, 29, 48, .26);
+    /*Para que cada que pasen el mouse, salga un sombreado atras del articulo*/
+}
+
+.article>i {
+    /*Para que solo afecte a los elementos i*/
+    font-size: 30px;
+    /*Para cambiar el tamaño del icono*/
+    color: #fff;
+    /*Para que el icono tenga un color blanco*/
+    background: #2570ff;
+    /*Para que tenga un fondo verdecito*/
+    display: inline-block;
+    /*Para que el elemento funcione como un bloque*/
+    width: 70px;
+    /*Para que el icono tenga un ancho de 70px*/
+    height: 70px;
+    /*Para que tenga un alto de 70px*/
+    text-align: center;
+    /*Para que el icono se centre*/
+    padding-top: 20px;
+    /*Para que el icono se separe 20px del margen de arriba*/
+    border-radius: 50%;
+    /*Para que el fondo sea un circulo*/
+    box-shadow: 0 8px 32px rgba(31, 76, 222, 0.37);
+    /*Para que el circulo tenga una sombra verdecita*/
+}
+
+.article>h3 {
+    /*Para que afecte el elemento h3 de la clase article*/
+    font-size: 24px;
+    /*Para cambiar el tamaño de la letra del titulo*/
+    margin-top: 30px;
+    /*Para que tenga un espacio arriba*/
+}
+
+.article>p {
+    /*Para que afecte el elemento p de la clase article*/
+    font-weight: 100;
+    /*Para cambiar la tonalidad de la letra*/
+    color: #5d6678;
+    /*Para cambiar el color de la letra*/
+    margin-top: 15px;
+    /*Para que tenga un espacio arriba*/
+    padding-bottom: 20px;
+    /*Para que tenga un esppaciado interno abajo*/
+}
+
+.article>a {
+    /*Para que afecte la etiqueta a en la clase article*/
+    color: #5d6678;
+    /*Para cambiar el color de la letra*/
+    font-weight: 400;
+    /*Para cambiar la tonalidad de la letra*/
+    text-decoration: none;
+    /*Para quitarle lo subrayado a la letra*/
+}
+
+.article>a:hover {
+    /*Para que cuando el mouse pase por encima de la etiqueta a, hacer*/
+    color: #1fde82;
+    /*Para agregarle color cuando pase el mouse por encima*/
+    transition: color .5s;
+    /*Para que se demore en cambiarse el color por 0.5s*/
+}
+
+/*Questions*/
+
+.questions {
+    height: 600px;
+    /*Para que el contenedor de alto sea de 60px*/
+    display: flex;
+    justify-content: space-between;
+    /*Para que haya un espacio en el contenedor entre los contenidos*/
+    align-items: center;
+    /*Para que los elementos se centren*/
+}
+
+.questions>img {
+    /*Para que en la clase "container-header" afecte solo la etiqueta img*/
+    width: 550px;
+    /*Para acomodar el ancho de la imagen*/
+}
+
+.texts-questions {
+    margin: 0 0 0 30px;
+    /*Para agregar un margen de 0 arriba, 0 a la derecha, 0 abajo y 30px a la izquierda*/
+}
+
+.texts-questions p {
+    font-weight: 100;
+    /*Para que la letra tenga mas opacidad*/
+    margin-top: 14px;
+    /*Para que los parrafos tengan un margen arriba de 14px*/
+    color: #5d6678;
+    /*Para que el color de las letras sea de un color gricesito*/
+}
+
+.texts-questions a {
+    margin: 28px 0 0 0;
+    /*Para que el boton tenga un margen arriba de 28px y 0 hacia los demas lados*/
+    width: 130px;
+    /*Para que tenga un ancho de 130px*/
+    display: block;
+    /*Para que tenga propiedad de bloque y asi poder modificarlo*/
+    background: #2570ff;
+    /*Para que el fondo sea un verde menta*/
+    text-align: center;
+    /*Para que el texto se centre*/
+    color: #fff;
+    /*Para que las letras tenga un color blanco*/
+    padding: 12px 0;
+    /*Para que tenga un espaciado interno de 12px arriba y abajo y 0 hacia los lados*/
+    text-decoration: none;
+    /*Para quitarle el subrayado de la etiqueta a*/
+    font-weight: 400;
+    /*Para que la letra tenga mas de tonalidad*/
+    text-transform: uppercase;
+    /*Para que el texto se ponga en letra maysucula*/
+    font-size: 14px;
+    /*Para cambiar el tamaño de la letra*/
+    border-radius: 5px;
+    /*Para que los bordes sean un poco mas curvados*/
+    box-shadow: 0 8px 32px rgba(31, 76, 222, 0.37);
+    /*Para que tenga un sombreado de 0 arriba, 8px hacia a la derecha y 32px hacia abajo*/
+}
+
+.results {
+    background: #2570ff;
+    /*Para agregarle un fondo al contenedor*/
+    padding-top: 30px;
+    /*Para agregar un espacido interno arriba*/
+}
+
+.conten-results {
+    display: flex;
+    justify-content: space-evenly;
+    /*Para que ocupe todo el espacio del contenedor con la misma distancia*/
+}
+
+.numbers {
+    width: 60%;
+    /*Para que ocupe el 60% de ancho del contenedor*/
+    display: flex;
+    flex-wrap: wrap;
+    /*Para que cuando se llene el espacio de linea del contenedor, el siguiente vaya hacia abajo*/
+    justify-content: space-evenly;
+    /*Para que se llene el contenedor y se reparta el espacio equitativamente*/
+}
+
+.numbers .number {
+    width: 45%;
+    /*Para que ocupe el 45% de ancho del contenedor, y asi quepan dos secciones por linea*/
+    background: rgba(255, 255, 255, .25);
+    /*Para que tenga una transparencia un poco blanca*/
+    color: #fff;
+    /*Para cambiar de color la letra*/
+    border-radius: 10px;
+    /*Para que cada tarjeta tenga un redondeado en sus margenes*/
+    padding: 40px 35px;
+    /*Para que tengan un espaciado interno de 40px arriba y abajo, y 35px hacia los lados*/
+    margin-bottom: 20px;
+    /*Para que tenga un espacio abajo*/
+}
+
+.numbers .number h4 {
+    color: #fff;
+    /*Para cambiar el color de la letra*/
+    font-size: 50px;
+    /*Para cambiar el tamaño de la letra*/
+    font-weight: 500;
+    /*Para cambiar la tonalidad de la letra*/
+    margin-bottom: 20px;
+    /*Para dar un espacio en la parte de abajo*/
+}
+
+.numbers .number p {
+    color: #f2f5fc;
+    /*Para cambiar el color de la letra*/
+    font-weight: 300;
+    /*Para cambiar la tonalidad de la letra*/
+}
+
+.results-text {
+    width: 37%;
+    /*Para que el texto ocupe el 37% de ancho de la pantalla*/
+}
+
+.results-text h4 {
+    color: #fff;
+    /*Para cambiar el color de la letra*/
+    font-size: 40px;
+}
+
+.results-text p {
+    color: #fff;
+    /*Para cambiar el color de la letra*/
+    font-weight: 300;
+    /*Para cambiar la tonalidad de la letra*/
+    margin: 20px 0;
+    /*Para que tenga un espacio de 20px arriba y abajo*/
+}
+
+.results-text>a {
+    color: #fff;
+    /*Para cambiar el color de la letra*/
+    text-decoration: none;
+    /*Para quitar el subrayado a la etiqueta a*/
+    display: inline-block;
+    /*Para que tenga propiedades de bloque*/
+    border: 1px solid #fff;
+    /*Para añadirle un borde al texto*/
+    padding: 10px 0;
+    /*Para que tenga un espaciado arriba y abajo de 10px*/
+    width: 120px;
+    /*Para que la caja ocupe 120px de ancho*/
+    text-align: center;
+    /*Para que el texto se centre*/
+    border-radius: 5px;
+    /*Para que la caja se vea un poco redonda*/
+}
+
+/*Services*/
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    /*Para que se separen dejando un espacio entre ellos*/
+}
+
+.services>img {
+    width: 500px;
+    /*Para que ocupe 500px a lo ancho*/
+}
+
+.box-skills {
+    margin: 30px 30px 0 0;
+    /*Para que tenga un espacio de 30px hacia arriba, 30 hacia la derecha y 0 a los demas lados*/
+}
+
+.box-skills h4 {
+    font-size: 24px;
+    /*Para cambiar el tamaño de la letra*/
+    background: #f2f2f2;
+    /*Para darle fondo*/
+    width: 350px;
+    /*Para que ocupe 350px de largo*/
+    border-radius: 6px;
+    /*Para que tenga un borde redondo*/
+    padding: 10px 0 10px 15px;
+    /*Para que tenga un espaciado interno de 10px hacia arriba, 0 hacia a la derecha, 10 hacia abajo y 15 hacia la izquierda*/
+    margin-bottom: 10px;
+    /*Para que tenga un espacio de 10px hacia abajo*/
+}
+
+.box-skills i {
+    color: #2570ff;
+    /*Para cambiar el color del icono*/
+    font-size: 20px;
+    /*Para cambiar el tamaño*/
+    margin-right: 2px;
+    /*Para que tenga un espacio a la derecha*/
+}
+
+/*footer*/
+footer {
+    background: #f2f2f2;
+    /*Para cambiar el fondo*/
+    padding: 60px 0;
+    /*Para agregar un espaciado interno de 60px arriba y abajo y 0 hacia los lados*/
+    overflow: hidden;
+    /*Para que cuando algo se salga del contenedor que se vuelva invisible*/
+    display: flex;
+    flex-wrap: wrap;
+    /*Para que cuando se llene la linea, el resto siga hacia abajo*/
+    justify-content: space-evenly;
+    /*Para que se repartan equitativamente en el contenedor*/
+    margin: auto;
+    /*Para que se centre el contenido*/
+}
+
+.part-footer {
+    width: 20%;
+    /*Para que ocupe el 20% de ancho del contenedor*/
+    text-align: center;
+    /*Para que se centre el texto*/
+}
+
+.part-footer h4 {
+    color: #1d273b;
+    /*Para cambiar el color de la letra*/
+    font-size: 20px;
+    /*Para cambiar el tamaño de la letra*/
+    font-weight: 400;
+    /*Para cambiar la tonalidad de la letra*/
+    margin-bottom: 20px;
+    /*Para que haya un espaciado de 20px abajo*/
+}
+
+.part-footer a {
+    display: block;
+    /*Para que tenga propiedad de bloque*/
+    text-decoration: none;
+    /*Para que no tenga el subrayado*/
+    color: #5d6678;
+    /*Para cambiar el color de letra*/
+    font-weight: 300;
+    /*Para cambiar la tonalidad de la letra*/
+    transition: color .3s ease-in-out
+        /*Para que tenga un transicion de lento al principio y rapido al final*/
+    ;
+    margin-bottom: 10px;
+    /*Para que haya un espacio de 10px abajo*/
+}
+
+.part-footer a:hover {
+    color: #2570ff;
+    /*Para que cuando el mouse pase por encima del texto cambie de color*/
+}
+
+.social-media i {
+    font-size: 20px;
+    /*Para cambiar el tamaño del icono*/
+    display: inline-block;
+    /*Para que queden uno al lado del otro*/
+    color: #adb6c7;
+    /*Para cambiar el color del icono*/
+    border: 1px solid #adb6c7;
+    /*Para agregarle un borde*/
+    border-radius: 50%;
+    /*Para que el borde sea un circulo*/
+    width: 38px;
+    /*Para que ocupe 38px de ancho*/
+    height: 38px;
+    /*Para que ocupe 38px de alto*/
+    line-height: 36px;
+    /*Para que se centre el icono*/
+    cursor: pointer;
+    /*Para que cuando pase por encima del icono, se cambie a una manito*/
+    margin-top: 20px;
+    /*Para que haya un espacio arriba de 20px*/
+    text-align: center;
+    /*Para que se centre el contenido*/
+    transition: all ease-in-out .3s;
+    /*Para que haya una transicion en .3segundo y el "all" significa que va a afectar a todas las propiedades*/
+    margin-right: 5px;
+    /*Para que haya un espacio a la derecha de cada icono*/
+}
+
+.social-media i:hover {
+    color: #fff;
+    /*Para que cuando el mouse pase por encima del texto cambie de color*/
+    background-color: #2570ff;
+    /*Para que cuando el mouse pase por encima del icono que se cambie el fondo*/
+    border-color: #2570ff;
+    /*Para que se cambie de color el borde*/
+}
+
+.part-footer img {
+    width: 70%;
+    /*Para que la imagen del footer ocupe el 70% del contenedor a lo ancho*/
+}
+
+/*Breakpoints-responsive*/
+
+@media screen and (max-width:800px) {
+
+    /*Para cuando la pagina este en 800px hacer*/
+    .titulo {
+        font-size: 45px;
+    }
+
+    .container-header {
+        flex-direction: column;
+        /*Para que los elementos secoloquen en posicion de columna*/
+        justify-content: space-evenly;
+        /*Para que los elementos llenen el contenedor con un espacio relativo*/
+        height: 720px;
+        /*Para acomodar el alto del contenedor*/
+    }
+
+    .container-header>img {
+        /*Para que afecte la etiqueta img en el contenedor*/
+        width: 400px;
+        /*Para acomodar el ancho de la imagen*/
+    }
+
+    .texts-header {
+        margin: 0;
+        /*Para que no tenga nada de margen*/
+    }
+
+    /*About us*/
+    .article {
+        width: 45%;
+        /*Para que ocupe cada articulo el 45% de ancho*/
+    }
+
+    /*questions*/
+    .questions {
+        height: 720px;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .questions>img {
+        /*Para que afecte a la etiqueta img en la clase questions*/
+        width: 400px;
+        /*Para acomodar el ancho de la imagen*/
+    }
+
+    /*Results*/
+    .conten-results {
+        flex-direction: column-reverse;
+        /*Para que se coloque una encima de otra*/
+    }
+
+    .results-text>a {
+        /*Para que afecte a la etiqueta a en la clase results-text*/
+        margin-bottom: 60px;
+        /*Para darle un espacio abajo*/
+    }
+
+    .numbers {
+        width: 100%;
+        /*Para que cada carta de numeros ocupe el 100% de ancho*/
+    }
+
+    .results-text {
+        width: 100%;
+        /*Para que el texto ocupe el 100% de ancho*/
+    }
+
+    /*Services*/
+    .services {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .box-skills {
+        margin: 0 0 40px 0;
+    }
+
+    .services>img {
+        width: 400px;
+    }
+
+    /*Footer*/
+
+    footer {
+        justify-content: space-evenly;
+    }
+
+    .part-footer {
+        width: 40%;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .titulo {
+        font-size: 35px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .container-header {
+        height: 650px;
+    }
+
+    .nav {
+        padding: 0 10px;
+    }
+
+    .container-header>i {
+        width: 200px;
+    }
+
+    .links-header {
+        position: fixed;
+        background: #2570ff;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        clip-path: circle(0.0% at 100% 0);
+    }
+
+
+    .nav .menudos{
+        -webkit-clip-path: circle(133.8% at 100% 0);
+        clip-path: circle(133.8% at 100% 0);
+    }
+
+    .nav .links-header a{
+        color: #fff;
+    }
+    .btn-usuario-inicio-sesion{
+        background: #2570ff;
+        margin-right: 22px;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    .article {
+        width: 95%;
+    }
+
+    .numbers .number {
+        width: 95%;
+    }
+
+    .results-text {
+        font-size: 35px;
+    }
+
+    .services>img {
+        width: 200px;
+    }
+
+    .box-skills {
+        width: 100%;
+    }
+
+}

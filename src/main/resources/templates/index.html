@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Depresion</title>
+        <link rel="stylesheet" type="text/css" href="static/css/style.css" th:href="@{/css/style.css}"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https: //fonts.googleapis.com/css2? family = Roboto: wght @ 100; 300; 400; 700 & display = swap "
+              rel=" stylesheet ">
+        <script src="https://kit.fontawesome.com/8240483ba6.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+                <div class="container">
+                    <a th:href="@{/}" class="navbar-brand">Depresion</a>
+                    <button class="navbar-toggler bg-dark" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon bg-dark"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item px-2">
+                                <a th:href="@{/}" class="nav-link active">Inicio</a>
+                            </li>
+                            <li sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item px-2">
+                                <a th:href="@{/citas}" class="nav-link active">Citas</a>
+                            </li>
+                            <li sec:authorize="hasRole('ROLE_ADMIN')" class="nav-item px-2">
+                                <a th:href="@{/generar}" class="nav-link active">Generar cita</a>
+                            </li>
+                            <li sec:authorize="hasRole('ROLE_USER')" class="nav-item px-2">
+                                <a th:href="@{/solicitar}" class="nav-link active">Solicitar cita</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                 <ul class="navbar-nav">
+                <li sec:authorize="!isAuthenticated()" class="navbar-item">
+                    <a th:href="@{/registro}" class="nav-link active">Registrar</a>
+                </li>
+                <li sec:authorize="!isAuthenticated()" class="navbar-item">
+                    <a th:href="@{/login}" class="nav-link active">Iniciar sesion</a>
+                </li>
+                <li style="margin-right: 40px" sec:authorize="isAuthenticated()" class="navbar-item">
+                    <a th:href="@{/perfil}" sec:authentication="name" class="nav-link active"></a>
+                </li>
+                <li sec:authorize="isAuthenticated()" class="navbar-item"><a th:href="@{/logout}" class="nav-link active">Cerrar sesion</a></li>
+            </ul>
+
+            </nav>
+            <div class="container">
+                <section class="container-header">
+                    <section class="texts-header">
+                        <h1>¿Que es la depresion?</h1>
+                        <p>La depresión clínica, es una enfermedad grave y común que nos afecta física y mentalmente en
+                            nuestro modo de sentir y de pensar. La depresión nos puede provocar deseos de alejarnos de
+                            nuestra familia, amigos, trabajo, y escuela. Puede además causarnos ansiedad, pérdida del sueño,
+                            del apetito, y falta de interés o placer en realizar diferentes actividades.
+
+                            “Juan y yo habíamos imaginado durante mucho tiempo planes maravillosos para visitar a nuestras
+                            familias y volver a ver a nuestros amigos. Sin embargo, en ese momento hacer un viaje, era la
+                            última cosa que yo quería hacer. ¡Me sentía tan cansada! Algunas mañanas ni siquiera podía
+                            levantarme de la cama”.
+                        </p>
+                    </section>
+                    <img th:src="@{/images/superar_depresion_por_ti_mismo.jpg}" alt="ilustracion-1">
+                </section>
+            </div>
+        </header>
+
+        <section class="about-us">
+            <div class="container-1">
+                <h2 class="titulo">Tipos de depresion</h2>
+                <div class="container-article">
+                    <div class="article">
+                        <i class="fas fa-hand-spock"></i>
+                        <h3>Depresion mayor</h3>
+                        <p>Causa sentimientos persistentes de tristeza, enojo o frustración. La depresión mayor puede durar
+                            varias
+                            semanas o más</p>
+
+                    </div>
+                    <div class="article">
+                        <i class="fas fa-hand-spock"></i>
+                        <h3>Transtorno depresivo persistente</h3>
+                        <p>Causa síntomas depresivos que duran dos años o más, y por lo general se le ofrece mas atencion
+                        </p>
+
+                    </div>
+                    <div class="article">
+                        <i class="fas fa-hand-spock"></i>
+                        <h3>Depresion posparto</h3>
+                        <p>Después de dar a luz, muchas mujeres se sienten tristes, pero la depresión posparto causa una
+                            tristeza y
+                            una ansiedad extremas después del parto. Puede impedir que una mujer se cuide a sí misma o a su
+                            bebé</p>
+
+                    </div>
+                    <div class="article">
+                        <i class="fas fa-hand-spock"></i>
+                        <h3>Trastorno afectivo estacional</h3>
+                        <p>Este tipo de presión suele ocurrir en el invierno, cuando hay menos sol durante el día. La
+                            mayoría de las
+                            personas con trastorno afectivo estacional se siente mejor en la primavera y el verano</p>
+
+                    </div>
+                    <div class="article">
+                        <i class="fas fa-hand-spock"></i>
+                        <h3>Depresion psicotica</h3>
+                        <p>Las personas con depresión psicótica tienen síntomas de depresión y psicosis. La psicosis es una
+                            pérdida del contacto con la realidad. Usualmente incluye: Delirios: falsas creencias acerca de
+                            lo que está sucediendo o de lo que uno es.</p>
+
+                    </div>
+                    <div class="article">
+                        <i class="fas fa-hand-spock"></i>
+                        <h3>Trastorno bipolar</h3>
+                        <p>es una enfermedad mental que causa cambios extremos en el estado de ánimo que comprenden altos
+                            emocionales (manía o hipomanía) y bajos emocionales (depresión).</p>
+
+                    </div>
+                </div>
+        </section>
+        <section class="questions container">
+            <section class="texts-questions">
+                <h1>Diagnostico de depresion</h1>
+                <p>Un test de depresión se usa para diagnosticar la enfermedad. Su médico o profesional de atención primaria
+                    podría hacerle una prueba si usted tiene signos de depresión.</p>
+            </section>
+            <img th:src="@{/images/prof.jpg}" alt="ilustracion-1">
+        </section>
+        <section class="results">
+            <div class="container-1 conten-results">
+                <!--Se le agrega un container para que no este limitado por un margen, es para que toda su parte este completa-->
+                <section class="numbers">
+                    <div class="number">
+                        <h4>4.7%</h4>
+                        <p>Indice de depresion en colombia</p>
+                    </div>
+                    <div class="number">
+                        <h4>3.8%</h4>
+                        <p>Indice de depresion en el mundo</p>
+                    </div>
+                    <div class="number">
+                        <h4>Entre el 25% y 50%</h4>
+                        <p>Depresion en universitarios</p>
+                    </div>
+                    <div class="number">
+                        <h4>24.2%</h4>
+                        <p>Depresion en jovenes de edad entre 9 y 19 años</p>
+                    </div>
+                </section>
+                <section class="results-text">
+                    <h4>Indice de depresion</h4>
+                    <p>Cifras de por donde esta el indice de la depresion en distintos campos</p>
+                </section>
+            </div>
+        </section>
+        <section class="container-1 services">
+            <img th:src="@{/images/psicologos.jpg}" alt="Ilustracion-3">
+            <div class="box-skills">
+                <h3>Nuestros psicologos</h3>
+                <h4><i class="fas fa-check-circle"></i>Salud mental</h4>
+                <h4><i class="fas fa-check-circle"></i>Depresion</h4>
+                <h4><i class="fas fa-check-circle"></i>Ansiedad</h4>
+                <h4><i class="fas fa-check-circle"></i>Guiar a personas en eventos postraumaticos</h4>
+                <h4><i class="fas fa-check-circle"></i>Asesorar de manejor manera su futuro</h4>
+            </div>
+        </section>
+        <footer>
+            <div class="part-footer">
+                <p>Dylan Vasquez</p> <br>
+            </div>
+            <div class="part-footer">
+                <h4>Social networks</h4>
+                <div class="social-media">
+                    <i class="fab fa-facebook" onclick="location.href = 'https://www.facebook.com/dylanedgardo.vasquesochoa'"></i>
+                    <i class="fab fa-instagram"onclick="location.href = 'https://www.instagram.com/dylanvasquez16/?hl=es-la'"></i>
+                </div>
+            </div>
+        </footer>
+    <center><p>&#169 Dylan Vasquez </p></center>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+
+</html>

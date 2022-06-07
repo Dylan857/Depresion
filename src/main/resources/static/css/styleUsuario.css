@@ -1,0 +1,16 @@
+.header{
+    text-align: center;
+    height: 300px;
+    padding: 12px;
+    background-color: #2570ff;
+}
+.avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.username{
+    font-size: 18px;
+    margin-top: 14px;
+    color: #fff;
+}
